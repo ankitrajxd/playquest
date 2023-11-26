@@ -1,30 +1,75 @@
-# React + TypeScript + Vite
+# GameHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GameHub is a video game discovery platform, allowing users to search, filter, sort, and view details of various games. This project is implemented using TypeScript and React.js.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have met the following requirements:
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js: Make sure you have Node.js installed on your machine. You can download it from [here](https://nodejs.org/).
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Installation
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/GameHub.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd GameHub
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+To run the GameHub project, follow these steps:
+
+1. Start the development server:
+
+   ```bash
+   npm start
+   ```
+
+2. Open your browser and visit [http://localhost:3000](http://localhost:3000).
+
+Now, you should see the GameHub application running.
+
+## Features
+
+- **Search:** Users can search for games based on keywords.
+- **Filter:** Filter games based on various criteria (e.g., genre, platform).
+- **Sort:** Sort games by different parameters (e.g., popularity, release date).
+- **Game Details:** View detailed information about a selected game.
+
+Feel free to explore and customize the application based on your preferences!
+
+## Contributing
+
+If you'd like to contribute to GameHub, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
