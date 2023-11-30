@@ -4,20 +4,22 @@ import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import { Genre } from "../hooks/useGenre";
 import { Platform } from "../hooks/usePlatform";
+import { GameQuery } from "../App";
 // import GameCardContainer from "./GameCardContainer";
 
 interface Props {
-  selectedGenre: Genre | null;
-  selectedPlatform: Platform | null;
+  gameQuery: GameQuery;
+  // selectedGenre: Genre | null;
+  // selectedPlatform: Platform | null;
 }
 
-const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
+const GameGrid = ({ gameQuery }: Props) => {
   // now we will pass this selected genre to useGames hook pass it as query when making request.
   const {
     data: games,
     error,
     isLoading,
-  } = useGames(selectedGenre, selectedPlatform);
+  } = useGames(gameQuery);
   const Skeletons = [1, 2, 3, 4, 5, 6];
 
   return (
