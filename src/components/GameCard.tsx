@@ -11,6 +11,7 @@ import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Emoji from "./Emoji";
 
 interface Props {
   game: Game;
@@ -25,7 +26,7 @@ const GameCard = ({ game }: Props) => {
           <PlatformIconList game={game} />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize="2xl">{game.name}</Heading>
+        <Heading fontSize="2xl">{game.name} <Emoji rating={game.rating_top}/></Heading>
         <Button
           rightIcon={<IoIosArrowRoundForward />}
           marginTop={4}
