@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/react";
+import { Heading, Text } from "@chakra-ui/react";
 import { GameQuery } from "../App";
 
 interface Props {
@@ -6,13 +6,12 @@ interface Props {
 }
 
 const GameHeading = ({ gameQuery }: Props) => {
-  const heading = `${gameQuery.platform?.name || ""} ${
-    gameQuery.genre?.name || ""
-  } Games`;
+  const platformHeading = <Text  as='span' color="#0BC5EA">{gameQuery.platform?.name || ""}</Text>;
+  const heading = `${gameQuery.genre?.name || ""} Games`;
 
   return (
-    <Heading as="h1" fontSize='5xl' marginY={5}>
-      {heading}
+    <Heading as="h1" fontSize="5xl" marginY={5}>
+      {platformHeading} {heading}
     </Heading>
   );
 };
