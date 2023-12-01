@@ -35,6 +35,7 @@ function App() {
         base: "1fr",
         lg: "250px 1fr",
       }}
+      width="100%"
     >
       <GridItem area="nav">
         <NavBar
@@ -59,7 +60,7 @@ function App() {
         }}
       >
         <GameHeading gameQuery={gameQuery} />
-        <HStack spacing={{ lg: 3, sm: 3, base: 2 }} marginBottom={5}>
+        <HStack flexWrap='wrap' spacing={{ lg: 3, sm: 3, base: 2 }} marginBottom={5}>
           <GenreDrawer>
             <GenreList
               seletedGenre={gameQuery.genre}
