@@ -49,7 +49,15 @@ function App() {
           />
         </GridItem>
       </Show>
-      <GridItem area="main" padding={2}>
+      <GridItem
+        area="main"
+        padding={{
+          base: 4,
+          md: 2,
+          lg: 2,
+          xl: 2,
+        }}
+      >
         <GameHeading gameQuery={gameQuery} />
         <HStack spacing={{ lg: 3, sm: 3, base: 2 }} marginBottom={5}>
           <GenreDrawer>
