@@ -1,9 +1,15 @@
-import { HStack, Show, Switch, useColorMode } from "@chakra-ui/react";
+import { HStack, Show, Switch } from "@chakra-ui/react";
 import { MdNightsStay } from "react-icons/md";
 import { WiDaySunny } from "react-icons/wi";
 
-const ColorModeSwitch = () => {
-  const { toggleColorMode, colorMode } = useColorMode();
+interface Props{
+  colorMode: string;
+  toggleColorMode: () => void;
+}
+
+
+const ColorModeSwitch = ({colorMode, toggleColorMode}: Props) => {
+  
 
   return (
     <HStack>
