@@ -26,11 +26,6 @@ const theme = extendTheme({
       900: "#111",
     },
   },
-  transitions: {
-    colorMode: {
-      duration: 1000,
-    },
-  },
 });
 
 export default theme;
