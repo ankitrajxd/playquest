@@ -1,3 +1,23 @@
 form {
-    width: 100%;
+  width: 100%;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: white;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 0.5rem;
+  border: 0.2px transparent rgba(86, 81, 183, 0.5);
 }
