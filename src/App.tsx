@@ -27,6 +27,7 @@ function App() {
 
   return (
     <Grid
+      paddingInline={{ lg: 6 }}
       templateAreas={{
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
@@ -54,13 +55,15 @@ function App() {
         area="main"
         padding={{
           base: 4,
-          md: 2,
-          lg: 2,
-          xl: 2,
+          md: 4,
         }}
       >
         <GameHeading gameQuery={gameQuery} />
-        <HStack flexWrap='wrap' spacing={{ lg: 3, sm: 3, base: 2 }} marginBottom={5}>
+        <HStack
+          flexWrap="wrap"
+          spacing={{ lg: 3, sm: 3, base: 2 }}
+          marginBottom={5}
+        >
           <GenreDrawer>
             <GenreList
               seletedGenre={gameQuery.genre}

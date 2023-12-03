@@ -24,7 +24,7 @@ const GenreDrawer = ({ children }: Props) => {
   return (
     <>
       <Show below="lg">
-        <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+        <Button bgColor='#B9B4C7' ref={btnRef} colorScheme="teal" onClick={onOpen}>
           <GiHamburgerMenu/>
         </Button>
 
