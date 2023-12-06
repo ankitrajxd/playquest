@@ -20,7 +20,7 @@ export interface GameQuery {
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery); // as Gamequery will allow us to pass empty object in this
 
-  // query object patter -  it contains all the info related querying the game
+  // query object pattern -  it contains all the info related querying the game
 
   // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
   // const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(null);
