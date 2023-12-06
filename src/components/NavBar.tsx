@@ -1,5 +1,6 @@
 import {
   Avatar,
+  Button,
   HStack,
   Image,
   Menu,
@@ -34,7 +35,7 @@ const NavBar = ({ onSearch }: Props) => {
         toggleColorMode={toggleColorMode}
       />
 
-      <Menu>
+      <Menu autoSelect={false}>
         <MenuButton>
           <Avatar
             size="sm"
@@ -44,7 +45,12 @@ const NavBar = ({ onSearch }: Props) => {
         </MenuButton>
         <MenuList>
           <MenuGroup title="Account">
-            <MenuItem>Login</MenuItem>
+            {/* <MenuItem></MenuItem> */}
+            <Wrap marginInline={2}>
+              <Button marginBottom={2} width="100%" size="md" height="48px">
+                Login
+              </Button>
+            </Wrap>
             <MenuItem>Signup</MenuItem>
           </MenuGroup>
           <MenuDivider />

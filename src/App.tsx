@@ -1,4 +1,4 @@
-import { Grid, GridItem, HStack, Show } from "@chakra-ui/react";
+import { Grid, GridItem, HStack, Show, Text } from "@chakra-ui/react";
 import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
@@ -59,10 +59,16 @@ function App() {
         }}
       >
         <GameHeading gameQuery={gameQuery} />
+        <Text display={{base: 'none', md: 'block'}}>
+          PC games, or personal computer games, started with the video game
+          crash of 1983. PC games became popular after the development of the
+          microprocessor and microcomputer.
+        </Text>
         <HStack
           flexWrap="wrap"
           spacing={{ lg: 3, sm: 3, base: 2 }}
           marginBottom={5}
+          marginTop={4}
         >
           <GenreDrawer>
             <GenreList
