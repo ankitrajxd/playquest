@@ -59,7 +59,7 @@ function App() {
         }}
       >
         <GameHeading gameQuery={gameQuery} />
-        <Text display={{base: 'none', md: 'block'}}>
+        <Text display={{ base: "none", md: "block" }}>
           PC games, or personal computer games, started with the video game
           crash of 1983. PC games became popular after the development of the
           microprocessor and microcomputer.
