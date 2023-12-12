@@ -13,15 +13,16 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@tanstack/react-query": "^5.13.4",
-    "@tanstack/react-query-devtools": "^5.13.5",
+    "@tanstack/react-query": "4.28",
+    "@tanstack/react-query-devtools": "4.28",
     "axios": "^1.6.2",
     "dotenv": "^16.3.1",
     "framer-motion": "^10.16.12",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0"
+    "react-icons": "^4.12.0",
+    "react-infinite-scroll-component": "^6.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.10.1",

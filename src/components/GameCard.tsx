@@ -1,5 +1,5 @@
 import {
-  Button,
+  // Button,
   Card,
   CardBody,
   HStack,
@@ -10,7 +10,7 @@ import { Game } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
-import { IoIosArrowRoundForward } from "react-icons/io";
+// import { IoIosArrowRoundForward } from "react-icons/io";
 import Emoji from "./Emoji";
 
 interface Props {
@@ -19,17 +19,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card
-      transition="transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
-      _hover={{
-        base: "",
-        lg: {
-          transform: "scale(1.07)",
-        },
-      }}
-      overflow="hidden"
-      borderRadius={10}
-    >
+    <Card overflow="hidden" borderRadius={10}>
       <Image src={getCroppedImageUrl(game.background_image)}></Image>
       <CardBody>
         <HStack marginBottom={3} justifyContent="space-between">
@@ -39,14 +29,14 @@ const GameCard = ({ game }: Props) => {
         <Heading fontSize="2xl">
           {game.name} <Emoji rating={game.rating_top} />
         </Heading>
-        <Button
+        {/* <Button
           rightIcon={<IoIosArrowRoundForward />}
           marginTop={4}
           colorScheme="gray"
           size="xs"
         >
           {game.suggestions_count}
-        </Button>
+        </Button> */}
       </CardBody>
     </Card>
   );
