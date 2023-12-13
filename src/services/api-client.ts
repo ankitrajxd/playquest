@@ -1,10 +1,13 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { FetchResponse } from "../hooks/useData";
 
+// USING ENV VARIABLES IN VITE.
+const { VITE_REACT_APP_API_KEY } = import.meta.env;
+
 const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
   params: {
-    key: "80e5861d1468496bbcb92c549a967584",
+    key: VITE_REACT_APP_API_KEY,
   },
 });
 

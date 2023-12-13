@@ -3,15 +3,17 @@ import NavBar from "./components/NavBar";
 import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
-import { Genre } from "./hooks/useGenre";
 import PlatformSelector from "./components/PlatformSelector";
 import { Platform } from "./hooks/usePlatform";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 import GenreDrawer from "./components/GenreDrawer";
 
+// undefined: the absence of a value
+// null: the intentional absence of a value
+
 export interface GameQuery {
-  genre: Genre | null;
+  genreID?: number;
   platform: Platform | null;
   sortOrder: string;
   searchText: string;
@@ -46,8 +48,10 @@ function App() {
       <Show above="lg">
         <GridItem area="aside" paddingX={4}>
           <GenreList
-            seletedGenre={gameQuery.genre}
-            onSelectGenre={(genre) => setGameQuery({ ...gameQuery, genre })}
+            seletedGenreID={gameQuery.genreID}
+            onSelectGenre={(genre) =>
+              setGameQuery({ ...gameQuery, genreID: genre.id })
+            }
           />
         </GridItem>
       </Show>
@@ -72,11 +76,9 @@ function App() {
         >
           <GenreDrawer>
             <GenreList
-              seletedGenre={gameQuery.genre}
+              seletedGenreID={gameQuery.genreID}
               onSelectGenre={(genre) => {
-                if (genre !== gameQuery.genre) {
-                  setGameQuery({ ...gameQuery, genre });
-                }
+                setGameQuery({ ...gameQuery, genreID: genre.id });
               }}
             />
           </GenreDrawer>

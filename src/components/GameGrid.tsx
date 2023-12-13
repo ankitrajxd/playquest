@@ -7,6 +7,8 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import { GameQuery } from "../App";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import GameCardContainer from "./GameCardContainer";
+
 
 // import GameCardContainer from "./GameCardContainer";
 
@@ -31,6 +33,7 @@ const GameGrid = ({ gameQuery }: Props) => {
   if (error) {
     return <Text>{error.message}</Text>;
   }
+  
 
   const fetchedGamesCount =
     data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
@@ -50,10 +53,13 @@ const GameGrid = ({ gameQuery }: Props) => {
         >
           {isLoading &&
             Skeletons.map((s) => <GameCardSkeleton key={s}></GameCardSkeleton>)}
+
           {data?.pages.map((page, index) => (
             <React.Fragment key={index}>
               {page.results.map((game) => (
-                <GameCard key={game.id} game={game}></GameCard>
+                <GameCardContainer key={game.id}>
+                  <GameCard key={game.id} game={game}></GameCard>
+                </GameCardContainer>
               ))}
             </React.Fragment>
           ))}
