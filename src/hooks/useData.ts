@@ -1,6 +1,6 @@
-import { AxiosRequestConfig, CanceledError } from "axios";
+import axios, { AxiosRequestConfig, CanceledError } from "axios";
 import { useState, useEffect } from "react";
-import apiClient from "../services/api-client";
+// import apiClient from "../services/api-client";
 
 export interface FetchResponse<T> {
   count: number;
@@ -23,7 +23,7 @@ const useData = <T>(
 
       setLoading(true);
 
-      apiClient
+      axios
         .get<FetchResponse<T>>(endpoint, {
           signal: controller.signal,
           ...requestConfig,
@@ -42,6 +42,7 @@ const useData = <T>(
 
       return () => controller.abort();
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     deps ? [...deps] : []
   );
 
