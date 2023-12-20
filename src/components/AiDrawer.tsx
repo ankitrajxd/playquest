@@ -14,10 +14,11 @@ import {
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+const { VITE_GOOLGE_AI_API_KEY } = import.meta.env;
+
 const AiDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { VITE_GOOLGE_AI_API_KEY } = import.meta.env;
   const genAI = new GoogleGenerativeAI(VITE_GOOLGE_AI_API_KEY);
 
   const [text, setText] = useState<string[]>([]);
@@ -34,7 +35,7 @@ const AiDrawer = () => {
       setText(resarray);
     }
     run();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   //   console.log(text);
@@ -44,11 +45,7 @@ const AiDrawer = () => {
       <Button colorScheme="teal" onClick={onOpen}>
         Ask AI
       </Button>
-      <Drawer
-        isOpen={isOpen}
-        placement="right"
-        onClose={onClose}
-      >
+      <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
