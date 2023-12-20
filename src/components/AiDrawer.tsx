@@ -13,8 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { VITE_GOOLGE_AI_API_KEY } from "../services/api-client";
 
-const { VITE_GOOLGE_AI_API_KEY } = import.meta.env;
+
 
 const AiDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
