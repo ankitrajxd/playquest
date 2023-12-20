@@ -25,7 +25,13 @@ const NavBar = ({ onSearch }: Props) => {
 
   return (
     <HStack padding="10px" paddingTop={{ lg: "24px", xl: "24px" }}>
-      <Image src={logo} boxSize="60px" />
+      <Image
+        onClick={() => {
+          window.location.href = "/";
+        }}
+        src={logo}
+        boxSize="60px"
+      />
 
       <Wrap marginInline={{ lg: 6 }} width="100%">
         <SearchInput colorMode={colorMode} onSearch={onSearch} />

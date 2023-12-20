@@ -17,9 +17,12 @@ import useAI from "../hooks/useAI";
 import { useState } from "react";
 
 const AiDrawer = () => {
+  const prompt =
+    "Show me trending 5 video games in 2023. just give the games name and not the description";
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [clicked, setisclicked] = useState(false);
-  const { data, isLoading, isError } = useAI(clicked);
+  const { data, isLoading, isError } = useAI(prompt,clicked);
 
   return (
     <>

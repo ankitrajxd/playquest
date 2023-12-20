@@ -9,7 +9,7 @@ import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 import GenreDrawer from "./components/GenreDrawer";
 import AiDrawer from "./components/AiDrawer";
-
+import Title from "./components/Title";
 
 // undefined: the absence of a value
 // null: the intentional absence of a value
@@ -65,11 +65,7 @@ function App() {
         }}
       >
         <GameHeading gameQuery={gameQuery} />
-        <Text display={{ base: "none", md: "block" }}>
-          PC games, or personal computer games, started with the video game
-          crash of 1983. PC games became popular after the development of the
-          microprocessor and microcomputer.
-        </Text>
+        <Title />
         <HStack
           flexWrap="wrap"
           spacing={{ lg: 3, sm: 3, base: 2 }}
@@ -97,7 +93,7 @@ function App() {
               setGameQuery({ ...gameQuery, sortOrder })
             }
           />
-          <AiDrawer/>
+          <AiDrawer />
         </HStack>
         <GameGrid
           gameQuery={gameQuery}
