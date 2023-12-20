@@ -8,6 +8,8 @@ import { Platform } from "./hooks/usePlatform";
 import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 import GenreDrawer from "./components/GenreDrawer";
+import AiDrawer from "./components/AiDrawer";
+
 
 // undefined: the absence of a value
 // null: the intentional absence of a value
@@ -95,6 +97,7 @@ function App() {
               setGameQuery({ ...gameQuery, sortOrder })
             }
           />
+          <AiDrawer/>
         </HStack>
         <GameGrid
           gameQuery={gameQuery}

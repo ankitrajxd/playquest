@@ -1,5 +1,6 @@
-import axios, { AxiosRequestConfig, CanceledError } from "axios";
+import { AxiosRequestConfig, CanceledError } from "axios";
 import { useState, useEffect } from "react";
+import { axiosInstance } from "../services/api-client";
 // import apiClient from "../services/api-client";
 
 export interface FetchResponse<T> {
@@ -23,7 +24,7 @@ const useData = <T>(
 
       setLoading(true);
 
-      axios
+      axiosInstance
         .get<FetchResponse<T>>(endpoint, {
           signal: controller.signal,
           ...requestConfig,
