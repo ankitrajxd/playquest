@@ -13,14 +13,14 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { VITE_GOOLGE_AI_API_KEY } from "../services/api-client";
+import { VITE_GOOGLE_AI_API_KEY } from "../services/api-client";
 
 
 
 const AiDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const genAI = new GoogleGenerativeAI(VITE_GOOLGE_AI_API_KEY);
+  const genAI = new GoogleGenerativeAI(VITE_GOOGLE_AI_API_KEY);
 
   const [text, setText] = useState<string[]>([]);
 
