@@ -13,12 +13,11 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { VITE_GOOGLE_AI_API_KEY } from "../services/api-client";
-
-
+import { FaMagic } from "react-icons/fa";
 
 const AiDrawer = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { VITE_GOOGLE_AI_API_KEY } = import.meta.env;
 
   const genAI = new GoogleGenerativeAI(VITE_GOOGLE_AI_API_KEY);
 
@@ -43,7 +42,7 @@ const AiDrawer = () => {
 
   return (
     <>
-      <Button colorScheme="teal" onClick={onOpen}>
+      <Button colorScheme="teal" onClick={onOpen} leftIcon={<FaMagic />}>
         Ask AI
       </Button>
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>

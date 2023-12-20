@@ -4,7 +4,7 @@ import { FetchResponse } from "../hooks/useData";
 // USING ENV VARIABLES IN VITE.
 const { VITE_REACT_APP_API_KEY } = import.meta.env;
 
-export const { VITE_GOOGLE_AI_API_KEY } = import.meta.env;
+
 
 export const axiosInstance = axios.create({
   baseURL: "https://api.rawg.io/api",
