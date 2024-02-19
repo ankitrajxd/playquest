@@ -44,7 +44,7 @@ To run the GameHub project, follow these steps:
 1. Start the Development  server:
 
    ```bash
-   npm start
+   npm run dev
    ```
 
 2. Start the Production  server:
