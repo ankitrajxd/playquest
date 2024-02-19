@@ -41,13 +41,19 @@ Before you begin, ensure you have met the following requirements:
 
 To run the GameHub project, follow these steps:
 
-1. Start the development server:
+1. Start the Development  server:
 
    ```bash
    npm start
    ```
 
-2. Open your browser and visit [http://localhost:3000](http://localhost:3000).
+2. Start the Production  server:
+
+   ```bash
+   npm start
+   ```
+
+3. Open your browser and visit [http://localhost:3000](http://localhost:3000).
 
 Now, you should see the GameHub application running.
 
