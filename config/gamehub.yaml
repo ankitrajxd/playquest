@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: playquest
-          image: ankitrajxd/playquest
+          image: ankitrajxd/playquest:1.0
           ports:
             - containerPort: 80
 ---
