@@ -27,6 +27,6 @@ spec:
     app: game-hub
   ports:
     - protocol: TCP
-      port: 80
+      port: 82
       targetPort: 80
   type: LoadBalancer
